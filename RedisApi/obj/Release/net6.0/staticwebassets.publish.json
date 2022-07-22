@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0d5X70SlIKfj8CRKqtGgIvwmvIUNab5IffpFC7Kv+Mg=",
+  "Source": "Redis.OM.Skeleton",
+  "BasePath": "_content/Redis.OM.Skeleton",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
