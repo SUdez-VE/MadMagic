@@ -1,0 +1,93 @@
+@model MvcMadMagic.Models.Spell
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Spell</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OnCast" class="control-label"></label>
+                <input asp-for="OnCast" class="form-control" />
+                <span asp-validation-for="OnCast" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoveLogic" class="control-label"></label>
+                <input asp-for="MoveLogic" class="form-control" />
+                <span asp-validation-for="MoveLogic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OnMove" class="control-label"></label>
+                <input asp-for="OnMove" class="form-control" />
+                <span asp-validation-for="OnMove" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OnHit" class="control-label"></label>
+                <input asp-for="OnHit" class="form-control" />
+                <span asp-validation-for="OnHit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Speed" class="control-label"></label>
+                <input asp-for="Speed" class="form-control" />
+                <span asp-validation-for="Speed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bounce" class="control-label"></label>
+                <input asp-for="Bounce" class="form-control" />
+                <span asp-validation-for="Bounce" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Size" class="control-label"></label>
+                <input asp-for="Size" class="form-control" />
+                <span asp-validation-for="Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Charges" class="control-label"></label>
+                <input asp-for="Charges" class="form-control" />
+                <span asp-validation-for="Charges" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Visible" class="control-label"></label>
+                <input asp-for="Visible" class="form-control" />
+                <span asp-validation-for="Visible" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <input asp-for="Type" class="form-control" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PathToImage" class="control-label"></label>
+                <input asp-for="PathToImage" class="form-control" />
+                <span asp-validation-for="PathToImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
