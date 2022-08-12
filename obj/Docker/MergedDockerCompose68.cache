@@ -1,0 +1,98 @@
+configs:
+  redis-stack.conf:
+    file: D:\Projects\MadMagic\redis-stack.conf
+services:
+  madmagic:
+    build:
+      context: D:\Projects\MadMagic
+      dockerfile: MvcMadMagic/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: MvcMadMagic
+      target: base
+    container_name: MvcMadMagic
+    depends_on:
+      redisapi:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: madmagic:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net6.0/MvcMadMagic.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 8080
+      target: 80
+    - published: 8081
+      target: 443
+    tty: true
+    volumes:
+    - D:\Projects\MadMagic\MvcMadMagic:/app:rw
+    - C:\Users\SUdez\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\SUdez\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\SUdez\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - D:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Users\SUdez\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Projects\MadMagic:/src:rw
+  redis_db:
+    image: redis/redis-stack
+    ports:
+    - published: 6379
+      target: 6379
+    - published: 8001
+      target: 8001
+    volumes:
+    - D:\Projects\MadMagic\redis_data:/data:rw
+    - D:\Projects\MadMagic\redis-stack.conf:/redis-stack.conf:rw
+    - D:\Projects\MadMagic\redis-dumb:/var/lib/redis:rw
+  redisapi:
+    build:
+      context: D:\Projects\MadMagic
+      dockerfile: RedisApi/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: RedisApi
+      target: base
+    container_name: RedisApi
+    depends_on:
+      redis_db:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: redisapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net6.0/RedisApi.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 5000
+      target: 80
+    - published: 5001
+      target: 5000
+    tty: true
+    volumes:
+    - D:\Projects\MadMagic\RedisApi:/app:rw
+    - C:\Users\SUdez\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\SUdez\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\SUdez\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - D:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Users\SUdez\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Projects\MadMagic:/src:rw
+version: '3.9'
+volumes:
+  redis-dumb: {}
+  redis-stack.conf: {}
+  redis_data: {}

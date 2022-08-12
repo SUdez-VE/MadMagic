@@ -2,16 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 
-if (builder.Environment.IsDevelopment())
-{
-    builder.Services.AddDbContext<MadMagicContext>(options =>
-        options.UseSqlite(builder.Configuration.GetConnectionString("MadMagicContext")));
-}
-else
-{
-    builder.Services.AddDbContext<MadMagicContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionMadMagicContext")));
-}
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

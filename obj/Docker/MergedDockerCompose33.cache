@@ -1,0 +1,47 @@
+name: dockercompose9631567809561928932
+services:
+  madmagic:
+    build:
+      context: D:\Projects\MadMagic
+      dockerfile: MvcMadMagic/Dockerfile
+    depends_on:
+      redisapi:
+        condition: service_started
+    image: madmagic
+    networks:
+      default: null
+  redis_db:
+    image: redis/redis-stack
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 8001
+      published: "8001"
+      protocol: tcp
+    - mode: ingress
+      target: 6379
+      published: "6379"
+      protocol: tcp
+  redisapi:
+    build:
+      context: D:\Projects\MadMagic
+      dockerfile: RedisApi/Dockerfile
+    depends_on:
+      redis_db:
+        condition: service_started
+    image: redisapi
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "5000"
+      protocol: tcp
+    - mode: ingress
+      target: 5000
+      published: "5001"
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose9631567809561928932_default

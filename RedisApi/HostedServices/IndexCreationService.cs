@@ -1,6 +1,8 @@
-using Redis.OM.Skeleton.Model;
+using Redis.OM;
+using ProjectsSharedClasses.MadMagic;
+using ProjectsSharedClasses.MadMagic.Spell;
 
-namespace Redis.OM.Skeleton.HostedServices;
+namespace RedisApi.HostedServices;
 
 public class IndexCreationService : IHostedService
 {
@@ -14,7 +16,7 @@ public class IndexCreationService : IHostedService
     {
         var t1 = _provider.Connection.CreateIndexAsync(typeof(SpellLogic));
         var t2 = _provider.Connection.CreateIndexAsync(typeof(SpellCard));
-        var t3 = _provider.Connection.CreateIndexAsync(typeof(Player));
+        var t3 = _provider.Connection.CreateIndexAsync(typeof(PlayerModel));
         var t4 = _provider.Connection.CreateIndexAsync(typeof(GameModel));
         await Task.WhenAll(t1, t2, t3, t4);
     }

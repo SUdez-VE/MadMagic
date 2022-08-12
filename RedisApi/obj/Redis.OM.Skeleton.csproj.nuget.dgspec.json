@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VOLODYA\\Desktop\\projects\\MadMagic-msa\\redisapi\\Redis.OM.Skeleton.csproj": {}
+    "D:\\Projects\\MadMagic\\RedisApi\\Redis.OM.Skeleton.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VOLODYA\\Desktop\\projects\\MadMagic-msa\\redisapi\\Redis.OM.Skeleton.csproj": {
+    "D:\\Projects\\MadMagic\\RedisApi\\Redis.OM.Skeleton.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VOLODYA\\Desktop\\projects\\MadMagic-msa\\redisapi\\Redis.OM.Skeleton.csproj",
+        "projectUniqueName": "D:\\Projects\\MadMagic\\RedisApi\\Redis.OM.Skeleton.csproj",
         "projectName": "Redis.OM.Skeleton",
-        "projectPath": "C:\\Users\\VOLODYA\\Desktop\\projects\\MadMagic-msa\\redisapi\\Redis.OM.Skeleton.csproj",
-        "packagesPath": "C:\\Users\\VOLODYA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VOLODYA\\Desktop\\projects\\MadMagic-msa\\redisapi\\obj\\",
+        "projectPath": "D:\\Projects\\MadMagic\\RedisApi\\Redis.OM.Skeleton.csproj",
+        "packagesPath": "C:\\Users\\SUdez\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\MadMagic\\RedisApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\VOLODYA\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\SUdez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.15.1, )"
+            },
             "Redis.OM": {
               "target": "Package",
               "version": "[0.1.9, )"
@@ -65,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

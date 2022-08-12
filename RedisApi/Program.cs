@@ -1,5 +1,5 @@
 using Redis.OM;
-using Redis.OM.Skeleton.HostedServices;
+using RedisApi.HostedServices;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -4,5 +4,70 @@
         <name>Redis.OM.Skeleton</name>
     </assembly>
     <members>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.Id">
+            <summary>
+            ID Объекта логики заклинания в DB/Redis
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.Name">
+            <summary>
+            Название логики заклинания? (Опционально)
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.OnCast">
+            <summary>
+            Строка части логики, происходящей при сотворении заклинания
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.MoveLogic">
+            <summary>
+            Логика передвижения снаряда (если есть) или определения попадания
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.OnMove">
+            <summary>
+            Логика, происходящая при каждом сдвиге снаряда (если есть)
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.OnHit">
+            <summary>
+            Логика при попадании
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.Speed">
+            <summary>
+            Скорость снаряда (-1 = Instant, 0 = Стоит на месте)
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.Bounce">
+            <summary>
+            Количество отскоков снаряда от стен/объектов (если есть)
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.Size">
+            <summary>
+            Размер снаряда в клетках (если есть)
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.Charges">
+            <summary>
+            Количество зарядов снаряда (уменьшаются при ударе или другой логике)
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.Visible">
+            <summary>
+            true или false значение, определяющее, видим ли снаряд объекта изначально.
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.Type">
+            <summary>
+            Строка типа заклинания
+            </summary>
+        </member>
+        <member name="P:Redis.OM.Skeleton.Model.SpellLogic.PathToImage">
+            <summary>
+            Путь к изображения снаряда заклинания (если есть)
+            </summary>
+        </member>
     </members>
 </doc>

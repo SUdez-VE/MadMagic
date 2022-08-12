@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IFvLYS7EO7DeoiXRhkPELpTcWSR8hDc8W3eSvpf1B2vf5EVCZFhVclKWY9eE4fCYbDPJtFfSffyAKdv1tc/4ug==",
+  "dgSpecHash": "QHalC7/tBh1PrLyj9d/YuAdP8V3AayTPZ5rK78HLdK1YihOPHS5oZMc8SYyfNzrEq+67FofEfE16EGcnaK821A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\VOLODYA\\Desktop\\projects\\MadMagic-msa\\ConsoleApp\\ConsoleApp.csproj",
+  "projectFilePath": "D:\\Projects\\MadMagic\\ConsoleApp\\ConsoleApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\VOLODYA\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\SUdez\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

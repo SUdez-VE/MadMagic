@@ -1,0 +1,43 @@
+services:
+  madmagic:
+    build:
+      context: D:\Projects\MadMagic
+      dockerfile: MvcMadMagic/Dockerfile
+    depends_on:
+      redisapi:
+        condition: service_started
+    image: madmagic
+    ports:
+    - published: 8080
+      target: 80
+    - published: 8081
+      target: 443
+  redis_db:
+    image: redis/redis-stack
+    ports:
+    - published: 8001
+      target: 8001
+    - published: 6379
+      target: 6379
+    volumes:
+    - D:\Projects\redis_data:/data:rw
+    - D:\Projects\redis-dumb:/var/lib/redis:rw
+  redisapi:
+    build:
+      context: D:\Projects\MadMagic
+      dockerfile: RedisApi/Dockerfile
+    depends_on:
+      redis_db:
+        condition: service_started
+    image: redisapi
+    ports:
+    - published: 5000
+      target: 80
+    - published: 5001
+      target: 5000
+version: '3.9'
+volumes:
+  redis-dumb: {}
+  redis_data:
+    external: true
+    name: redis_data

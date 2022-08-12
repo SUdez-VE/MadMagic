@@ -1,0 +1,17 @@
+﻿@model ProjectsSharedClasses.MadMagic.GameModel
+@{
+    ViewData["Title"] = Model.GameName;
+}
+<HeadContent>
+  <script src="site.js"></script>
+  <link rel="stylesheet" href="game.css">
+</HeadContent>
+<div class="container-fluid">
+    <div id="tilesMap" style="background-image: url(@Model.Map?.PathToBackImage);">
+        <div class="row">
+
+        </div>
+    </div>
+</div>
+
+

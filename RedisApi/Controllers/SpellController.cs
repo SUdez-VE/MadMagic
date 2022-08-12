@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Redis.OM.Searching;
-using Redis.OM.Skeleton.Model;
+using Redis.OM;
+using ProjectsSharedClasses.MadMagic.Spell;
 
-namespace Redis.OM.Skeleton.Controllers;
+namespace RedisApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
@@ -52,14 +53,14 @@ public class SpellController : ControllerBase
     [HttpPut("logic")]
     public async Task<SpellLogic> UpdateLogic([FromBody] SpellLogic logic)
     {
-        await _logics.Update(logic);
+        await _logics.UpdateAsync(logic);
         return logic;
     }
 
     [HttpPut("card")]
     public async Task<SpellCard> UpdateCard([FromBody] SpellCard card)
     {
-        await _cards.Update(card);
+        await _cards.UpdateAsync(card);
         return card;
     }
     [HttpGet("card/{id}")]
@@ -74,16 +75,16 @@ public class SpellController : ControllerBase
         return _cards.ToList();
     }
     [HttpDelete("logic/{id}")]
-    public IActionResult DeleteLogic([FromRoute]string id)
+    public async Task<IActionResult> DeleteLogic([FromRoute]string id)
     {
-        _provider.Connection.Unlink($"SpellLogic:{id}");
+        await _provider.Connection.UnlinkAsync($"SpellLogic:{id}");
         return NoContent();
     }
 
     [HttpDelete("card/{id}")]
-    public IActionResult DeleteCard([FromRoute] string id)
+    public async Task<IActionResult> DeleteCard([FromRoute] string id)
     {
-        _provider.Connection.Unlink($"SpellCard :{id}");
+        await _provider.Connection.UnlinkAsync ($"SpellCard :{id}");
         return NoContent();
     }
 }

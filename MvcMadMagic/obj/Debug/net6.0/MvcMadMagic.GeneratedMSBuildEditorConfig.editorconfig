@@ -8,65 +8,69 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MvcMadMagic
 build_property.RootNamespace = MvcMadMagic
-build_property.ProjectDir = c:\Users\VOLODYA\Desktop\projects\MadMagic-msa\MvcMadMagic\
+build_property.ProjectDir = D:\Projects\MadMagic\MvcMadMagic\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\VOLODYA\Desktop\projects\MadMagic-msa\MvcMadMagic
+build_property.MSBuildProjectDirectory = D:\Projects\MadMagic\MvcMadMagic
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/HelloWorld/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/HelloWorld/Welcome.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxXZWxjb21lLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/Home/Index.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/Home/Privacy.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/Shared/Error.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/MadMagic/Game.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFkTWFnaWNcR2FtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/MadMagic/MvcMadMagic/Views/MadMagic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFkTWFnaWNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/MadMagic/MvcMadMagic/Views/MadMagic/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFkTWFnaWNcVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/MadMagic/MvcMadMagic/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/Spells/Create.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/Spells/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlbGxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/Spells/Delete.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/Spells/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlbGxzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/Spells/Details.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/Spells/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlbGxzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/Spells/Edit.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/Spells/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlbGxzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/Spells/Index.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/Spells/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlbGxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/_ViewImports.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/_ViewStart.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/VOLODYA/Desktop/projects/MadMagic-msa/MvcMadMagic/Views/Shared/_Layout.cshtml]
+[D:/Projects/MadMagic/MvcMadMagic/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4win9a58bv

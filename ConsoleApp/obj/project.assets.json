@@ -48,24 +48,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VOLODYA\\.nuget\\packages\\": {}
+    "C:\\Users\\SUdez\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VOLODYA\\Desktop\\projects\\MadMagic-msa\\ConsoleApp\\ConsoleApp.csproj",
+      "projectUniqueName": "D:\\Projects\\MadMagic\\ConsoleApp\\ConsoleApp.csproj",
       "projectName": "ConsoleApp",
-      "projectPath": "C:\\Users\\VOLODYA\\Desktop\\projects\\MadMagic-msa\\ConsoleApp\\ConsoleApp.csproj",
-      "packagesPath": "C:\\Users\\VOLODYA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VOLODYA\\Desktop\\projects\\MadMagic-msa\\ConsoleApp\\obj\\",
+      "projectPath": "D:\\Projects\\MadMagic\\ConsoleApp\\ConsoleApp.csproj",
+      "packagesPath": "C:\\Users\\SUdez\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\MadMagic\\ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\VOLODYA\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\SUdez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -104,7 +111,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

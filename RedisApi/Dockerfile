@@ -1,16 +1,21 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
+EXPOSE 80
 
-# Copy csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
-
-# Copy everything else and build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+COPY ["RedisApi/RedisApi.csproj", "RedisApi/"]
+RUN dotnet restore "RedisApi/RedisApi.csproj"
 COPY . .
-RUN dotnet publish -c Release -o out
+WORKDIR "/src/RedisApi"
+RUN dotnet build "RedisApi.csproj" -c Release -o /app/build
 
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM build AS publish
+RUN dotnet publish "RedisApi.csproj" -c Release -o /app/publish
+
+FROM base AS final
 WORKDIR /app
-COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "Redis.OM.Skeleton.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "RedisApi.dll"]

@@ -1,0 +1,12 @@
+D:\Projects\MadMagic\ProjectsSharedClasses\bin\Debug\net6.0\ProjectsSharedClasses.deps.json
+D:\Projects\MadMagic\ProjectsSharedClasses\bin\Debug\net6.0\ProjectsSharedClasses.dll
+D:\Projects\MadMagic\ProjectsSharedClasses\bin\Debug\net6.0\ProjectsSharedClasses.pdb
+D:\Projects\MadMagic\ProjectsSharedClasses\obj\Debug\net6.0\ProjectsSharedClasses.csproj.AssemblyReference.cache
+D:\Projects\MadMagic\ProjectsSharedClasses\obj\Debug\net6.0\ProjectsSharedClasses.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\MadMagic\ProjectsSharedClasses\obj\Debug\net6.0\ProjectsSharedClasses.AssemblyInfoInputs.cache
+D:\Projects\MadMagic\ProjectsSharedClasses\obj\Debug\net6.0\ProjectsSharedClasses.AssemblyInfo.cs
+D:\Projects\MadMagic\ProjectsSharedClasses\obj\Debug\net6.0\ProjectsSharedClasses.csproj.CoreCompileInputs.cache
+D:\Projects\MadMagic\ProjectsSharedClasses\obj\Debug\net6.0\ProjectsSharedClasses.dll
+D:\Projects\MadMagic\ProjectsSharedClasses\obj\Debug\net6.0\refint\ProjectsSharedClasses.dll
+D:\Projects\MadMagic\ProjectsSharedClasses\obj\Debug\net6.0\ProjectsSharedClasses.pdb
+D:\Projects\MadMagic\ProjectsSharedClasses\obj\Debug\net6.0\ref\ProjectsSharedClasses.dll

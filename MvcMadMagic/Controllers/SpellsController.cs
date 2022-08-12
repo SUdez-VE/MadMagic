@@ -5,35 +5,35 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using MvcMadMagic.Models;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text;
+using MvcMadMagic.Models;
+using ProjectsSharedClasses.MadMagic.Spell;
 
 namespace MvcMadMagic.Controllers
 {
+    [Route("MadMagic/[controller]/[action]")]
     public class SpellsController : Controller
     {
-        private readonly MadMagicContext _context;
         private HttpClient _client;
-        private async Task<List<Spell>?> GetSpellsAsync()
+        private async Task<List<SpellLogic>?> GetSpellsAsync()
         {
-            return JsonConvert.DeserializeObject<List<Spell>?>(await (await _client.GetAsync(apiUrl + "logic/all")).Content.ReadAsStringAsync());
+            return JsonConvert.DeserializeObject<List<SpellLogic>?>(await (await _client.GetAsync(apiUrl + "logic/all")).Content.ReadAsStringAsync());
         }
-        private string apiUrl = "http://localhost:5000/Spell/";
+        private string apiUrl = "http://redisapi:80/Spell/";
 
-        public SpellsController(MadMagicContext context)
+        public SpellsController()
         {
-            _context = context;
             _client = new HttpClient();
         }
 
         // GET: Spells
         public async Task<IActionResult> Index()
         {
-              return await GetSpellsAsync() != null ? 
-                          View(await GetSpellsAsync()) :
-                          Problem("Entity set 'MadMagicContext.Spell'  is null.");
+            return await GetSpellsAsync() != null ?
+                        View(await GetSpellsAsync()) :
+                        Problem("Entity set 'MadMagicContext.Spell'  is null.");
         }
 
         // GET: Spells/Details/5
@@ -65,12 +65,10 @@ namespace MvcMadMagic.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,OnCast,MoveLogic,OnMove,OnHit,Speed,Bounce,Size,Charges,Visible,Type,PathToImage")] Spell spell)
+        public async Task<IActionResult> Create([Bind("Id,Name,OnCast,MoveLogic,OnMove,OnHit,Speed,Bounce,Size,Charges,Visible,Type,PathToImage")] SpellLogic spell)
         {
             if (ModelState.IsValid)
             {
-                //_context.Add(spell);
-                //await _context.SaveChangesAsync();
                 await _client.PostAsync(apiUrl + "logic", new StringContent(JsonConvert.SerializeObject(spell).ToString(), Encoding.UTF8, "application/json"));
                 return RedirectToAction(nameof(Index));
             }
@@ -99,7 +97,7 @@ namespace MvcMadMagic.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,Name,OnCast,MoveLogic,OnMove,OnHit,Speed,Bounce,Size,Charges,Visible,Type,PathToImage")] Spell spell)
+        public async Task<IActionResult> Edit(string id, [Bind("Id,Name,OnCast,MoveLogic,OnMove,OnHit,Speed,Bounce,Size,Charges,Visible,Type,PathToImage")] SpellLogic spell)
         {
             if (id != spell.Id)
             {
@@ -162,14 +160,14 @@ namespace MvcMadMagic.Controllers
             {
                 await _client.DeleteAsync(apiUrl + $"logic/{id}");
             }
-            
+
             // await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private async Task<bool> SpellExists(string id)
         {
-          return ((await GetSpellsAsync())?.Any(e => e.Id == id)).GetValueOrDefault();
+            return ((await GetSpellsAsync())?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

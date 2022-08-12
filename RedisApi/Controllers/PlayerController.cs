@@ -1,24 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
 using Redis.OM.Searching;
-using Redis.OM.Skeleton.Model;
+using Redis.OM;
+using ProjectsSharedClasses.MadMagic;
 
-namespace Redis.OM.Skeleton.Controllers;
+namespace RedisApi.Controllers;
 
 
 [ApiController]
 [Route("[controller]")]
 public class PlayerController : ControllerBase
 {
-    private readonly RedisCollection<Player> _players;
+    private readonly RedisCollection<PlayerModel> _players;
     private readonly RedisConnectionProvider _provider;
     public PlayerController(RedisConnectionProvider provider)
     {
         _provider = provider;
-        _players = (RedisCollection<Player>)provider.RedisCollection<Player>();
+        _players = (RedisCollection<PlayerModel>)provider.RedisCollection<PlayerModel>();
     }
 
     [HttpPost]
-    public async Task<Player> AddPlayer([FromBody] Player player)
+    public async Task<PlayerModel> AddPlayer([FromBody] PlayerModel player)
     {
         await _players.InsertAsync(player);
         return player;
